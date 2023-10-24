@@ -9,8 +9,8 @@ V2ray/Xray多用户管理脚本，向导式管理[新增|删除|修改]传输协
 ## [中文](README.md)  [English](README_EN.md)
 
 ## 特色
-- [x] 支持Xray管理, v2ray和xray相互独立, 不同命令(v2ray/xray)进入不同的core管理
-- [x] 调用v2ray官方api进行流量统计
+- [x] Suporte ao gerenciamento de raio X, v2ray e raio x são independentes um do outro, comandos diferentes (v2ray/xray) entram em gerenciamento de núcleo diferente
+- [x] Chame a API oficial do v2ray para obter estatísticas de tráfego
 - [x] **多用户, 多端口管理**, 混合传输协议管理不再是梦
 - [x] 首次安装时产生随机端口，默认配置mkcp + 随机一种 (srtp | wechat-video | utp | dtls | wireguard) header伪装;  
   安装完成显示配置信息;
