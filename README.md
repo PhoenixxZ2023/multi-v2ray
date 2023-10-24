@@ -1,83 +1,66 @@
-# multi-v2ray
-V2ray/Xray多用户管理脚本，向导式管理[新增|删除|修改]传输协议  
-![](https://img.shields.io/pypi/v/v2ray-util.svg) 
-[![Downloads](https://pepy.tech/badge/v2ray-util)](https://pepy.tech/project/v2ray-util)
-[![Downloads](https://pepy.tech/badge/v2ray-util/month)](https://pepy.tech/project/v2ray-util)
-![](https://img.shields.io/docker/pulls/jrohy/v2ray.svg)
-![](https://img.shields.io/github/license/Jrohy/multi-v2ray.svg)
+multi-v2ray
+Script de gerenciamento multiusuário V2ray/Xray, protocolo de transmissão de gerenciamento baseado em assistente [adicionar | excluir | modificar]
+ Transferências Transferências  
 
-## [中文](README.md)  [English](README_EN.md)
-
-## 特色
-- [x] Suporte ao gerenciamento de raio X, v2ray e raio x são independentes um do outro, comandos diferentes (v2ray/xray) entram em gerenciamento de núcleo diferente
-- [x] Chame a API oficial do v2ray para obter estatísticas de tráfego
-- [x] **多用户, 多端口管理**, 混合传输协议管理不再是梦
-- [x] 首次安装时产生随机端口，默认配置mkcp + 随机一种 (srtp | wechat-video | utp | dtls | wireguard) header伪装;  
-  安装完成显示配置信息;
-- [x] 查看配置信息显示vmess/vless字符串(v2rayN的分享链接格式)
-- [x] 生成**Telegram**的socks5/MTProto分享链接, 支持socks5 + tls组合
-- [x] 支持http/2, 随机生成伪装h2 path
-- [x] 开启关闭tcpFastOpen
-- [x] 直接开启[CDN](https://github.com/Jrohy/multi-v2ray/wiki/CloudFlare-cdn%E4%BB%A3%E7%90%86v2ray%E6%B5%81%E9%87%8F)
-- [x] 开启关闭动态端口
-- [x] 定时更新v2ray(需手动开启)
-- [x] 支持新版v2ray配置文件格式(v4.1+)
-- [x] 支持范围端口修改
-- [x] 支持程序和**命令行参数**管理控制
-- [x] 支持docker部署
-- [x] 支持VLESS和Trojan以及XTLS(v4.31.0+)
-- [x] 支持纯ipv6 vps
-- [x] 禁止BT
-
-## 功能
-- 一键 启动 / 停止 / 重启 V2ray 服务端
-- 流量统计(v2ray && iptables)
-- 命令行模式管理v2ray
-- 支持多用户， 多端口管理
-- 开启关闭动态端口
-- bittorrent的禁止与放行
-- 单端口, 范围端口的修改
-- 直接走Cloudcflare cdn
-- 开启关闭tcpFastOpen
-- 快速查看服务器连接信息, 常规配置修改
-- 自由更改**传输配置**：
-  - 常规TCP
-  - HTTP头部伪装
-  - WebSocket流量
-  - 常规mKCP流量
-  - mKCP 伪装 FaceTime通话流量(srtp)
-  - mKCP 伪装 BT下载流量(utp)
-  - mKCP 伪装 微信视频通话流量(wechat-video)
-  - mKCP 伪装 DTLS 1.2流量(dtls)
-  - mKCP 伪装 WireGuard流量(wireguard)
-  - HTTP/2的tls流量(h2)(需备域名) 
-  - Socks5
-  - MTProto
-  - Shadowsocks
-  - Quic
-  - VLESS_TCP
-  - VLESS_TLS
-  - VLESS_WS
-  - VLESS_REALITY
-  - Trojan
-
-## 安装命令
-```
+ChinêsInglês _
+recurso
+O mais importante sobre raio X, v2ray e raio
+Chame a API oficial do v2ray para obter estatísticas de tráfego
+ Gerenciamento multiusuário, multiporta e gerenciamento de protocolo de transmissão misto não é mais um sonho
+Uma porta aleatória é gerada durante a primeira instalação. A configuração padrão é mkcp + uma camuflagem de cabeçalho aleatória (srtp | wechat-video | utp | dtls | wireguard); as informações de configuração são exibidas após a conclusão da instalação
+ ;
+Visualize as informações de configuração para exibir a string vmess/vless (formato de link de compartilhamento do v2rayN)
+Gere link de compartilhamento de meias5/MTProto do Telegram , suporte para combinação de meias5 + tls
+Suporta http/2, gera aleatoriamente caminho h2 falso
+Ativar e desativar tcpFastOpen
+Abra o CDN diretamente
+Ativar e desativar portas dinâmicas
+Atualize o v2ray regularmente (precisa ser ativado manualmente)
+Suporta novo formato de arquivo de configuração v2ray (v4.1+)
+Modificação da porta do intervalo de suporte
+Programa de suporte e controle de gerenciamento de parâmetros de linha de comando
+Suporte à implantação do docker
+Suporta VLESS, Trojan e XTLS (v4.31.0+)
+Suporta vps ipv6 puro
+Sem BT
+Função
+Iniciar/parar/reiniciar o servidor V2ray com um clique
+Estatísticas de tráfego (v2ray && iptables)
+Gerenciamento de modo de linha de comando v2ray
+Suporta gerenciamento multiusuário e multiportas
+Ativar e desativar portas dinâmicas
+Proibição e lançamento de Bittorrent
+Porta única, modificação de porta de intervalo
+Vá diretamente para Cloudcflare cdn
+Ativar e desativar tcpFastOpen
+Visualize rapidamente informações de conexão do servidor e faça modificações gerais na configuração
+Altere livremente a configuração de transferência :
+TCP normal
+Mascaramento de cabeçalho HTTP
+Tráfego WebSocket
+Tráfego mKCP regular
+mKCP disfarça o tráfego de chamadas FaceTime (srtp)
+mKCP disfarça o tráfego de download de BT (utp)
+mKCP disfarça o tráfego de videochamada WeChat (wechat-video)
+mKCP disfarça o tráfego DTLS 1.2 (dtls)
+mKCP disfarça o tráfego WireGuard (wireguard)
+Tráfego HTTP/2 tls (h2) (nome de domínio obrigatório)
+Meias5
+MTProto
+Meias Sombrias
+Rápido
+VLESS_TCP
+VLESS_TLS
+VLESS_WS
+VLESS_REALITY
+troiano
+Comando de instalação
 source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
-```
-
-## 升级命令(保留配置文件更新)
-```
+Comando de atualização (manter o arquivo de configuração atualizado)
 source <(curl -sL https://multi.netlify.app/v2ray.sh) -k
-```
-
-## 卸载命令
-```
+comando de desinstalação
 source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
-```
-
-## 命令行参数
-```bash
+Parâmetros de linha de comando
 v2ray/xray [-h|help] [options]
     -h, help             查看帮助
     -v, version          查看版本号
@@ -103,38 +86,27 @@ v2ray/xray [-h|help] [options]
     clean                清理日志
     log                  查看日志
     rm                   卸载core
-```
+Execução do Docker
+Por padrão, mkcp + um arquivo de configuração de cabeçalho de camuflagem aleatório é criado ( se estiver usando xray, altere-o para o espelho jrohy/xray ):
 
-## Docker运行
-
-默认创建mkcp + 随机一种伪装头配置文件(**如果使用xray则换成镜像jrohy/xray**)：
-```
 docker run -d --name v2ray --privileged --restart always --network host jrohy/v2ray
-```
+Arquivo de configuração v2ray personalizado:
 
-自定义v2ray配置文件:
-```
 docker run -d --name v2ray --privileged -v /path/config.json:/etc/v2ray/config.json --restart always --network host jrohy/v2ray
-```
+Veja a configuração do v2ray:
 
-查看v2ray配置:
-```
 docker exec v2ray bash -c "v2ray info"
-```
+aviso : Se você usa centos, você precisa primeiro desligar o firewall
 
-**warning**: 如果用centos，需要先关闭防火墙
-```
 systemctl stop firewalld.service
 systemctl disable firewalld.service
-```
+sugestão
+Depois de instalar o v2ray, é altamente recomendável ativar o BBR e outras acelerações: one_click_script
+usa protocolos Trojan e VLESS.Recomenda-se instalar o nginx sozinho, o que pode fazer com que o v2ray retorne à porta 80 padrão sem problemas.
 
-## 建议
-安装完v2ray后强烈建议开启BBR等加速: [one_click_script](https://github.com/jinwyp/one_click_script)  
-使用Trojan和VLESS协议建议自行安装个nginx, 能让v2ray顺利Fallback到默认的80端口
-
-## 依赖
-v2ray docker: https://hub.docker.com/r/jrohy/v2ray  
-xray docker: https://hub.docker.com/r/jrohy/xray  
-pip: https://pypi.org/project/v2ray-util/  
-python3: https://github.com/Jrohy/python3-install  
+confiar
+docker v2ray: https://hub.docker.com/r/jrohy/v2ray
+docker xray: https://hub.docker.com/r/jrohy/xray
+pip: https://pypi.org/project/v2ray- utilitário/
+python3: https://github.com/Jrohy/python3-install
 acme: https://github.com/acmesh-official/acme.sh
