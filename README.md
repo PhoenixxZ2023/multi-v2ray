@@ -47,6 +47,10 @@ new install
 ```
 source <(curl -sL https://multi.netlify.app/v2ray.sh)
 ```
+## install option 2
+```
+bash <(curl -sL https://raw.githubusercontent.com/PhoenixxZ2023/multi-v2ray/v2ray.sh)
+```
 
 keep profile to update
 ```
